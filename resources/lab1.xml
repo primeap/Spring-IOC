@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+
+
+	<bean id="aobj" class="lab1.A">
+		<property name="a" value="99"></property>
+		<property name="msg" value="Msg from A"></property>
+	</bean>
+	
+	
+	<bean id="bobj" class="lab1.B">
+	<constructor-arg value="88"></constructor-arg>
+	<constructor-arg value="Hi from B"></constructor-arg>
+	
+	</bean>
+	<bean id="helloBeanId" name="helloBeanName" class="lab1.Hello">
+	<property name="aObject" ref="aobj"></property>
+	<constructor-arg ref="bobj"></constructor-arg>
+	</bean>
+
+</beans>
